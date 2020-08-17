@@ -3,10 +3,11 @@ import asyncio
 from discord.ext.commands import Bot
 from discord.ext import commands
   
+f = open("token.txt", "r")
 
 bot_prefix= "+"
 client = commands.Bot(command_prefix=bot_prefix)
-TOKEN = '' # insert token here
+TOKEN = f.read() # insert token here
 
 # I want a custom help menu here
 client.remove_command('help')
